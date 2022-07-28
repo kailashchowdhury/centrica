@@ -162,12 +162,12 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/centrica/dev/1659003276272-2022-07-28T10:14:36.272Z/centrica.zip"
+          "S3Key": "serverless/centrica/dev/1659004266888-2022-07-28T10:31:06.888Z/centrica.zip"
         },
         "Handler": "catfacts.handler",
         "Runtime": "python3.9",
         "FunctionName": "centrica-dev-catfactsPython",
-        "MemorySize": 256,
+        "MemorySize": 128,
         "Timeout": 29,
         "Architectures": [
           "x86_64"
@@ -190,12 +190,12 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/centrica/dev/1659003276272-2022-07-28T10:14:36.272Z/centrica.zip"
+          "S3Key": "serverless/centrica/dev/1659004266888-2022-07-28T10:31:06.888Z/centrica.zip"
         },
         "Handler": "catfactnode.getItemDetails",
         "Runtime": "nodejs14.x",
         "FunctionName": "centrica-dev-catfactsNode",
-        "MemorySize": 256,
+        "MemorySize": 128,
         "Timeout": 29,
         "Architectures": [
           "x86_64"
@@ -483,7 +483,7 @@
         "CatfactsNodeLambdaPermissionApiGateway"
       ]
     },
-    "ApiGatewayDeployment1659003274613": {
+    "ApiGatewayDeployment1659004265499": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {

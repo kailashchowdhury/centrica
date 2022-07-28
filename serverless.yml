@@ -58,7 +58,7 @@ functions:
   catfactsPython:
     handler: catfacts.handler
     runtime: python3.9
-    memorySize: 256
+    memorySize: 128
     events:
       - http:
           path: python/catfact/fact
@@ -67,7 +67,7 @@ functions:
   catfactsNode:
     handler: catfactnode.getItemDetails
     runtime: nodejs14.x
-    memorySize: 256
+    memorySize: 128
     events:
       - http:
           path: node/catfact/fact

@@ -186,12 +186,12 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/centrica/dev/1659003276272-2022-07-28T10:14:36.272Z/centrica.zip"
+                "S3Key": "serverless/centrica/dev/1659004266888-2022-07-28T10:31:06.888Z/centrica.zip"
               },
               "Handler": "catfacts.handler",
               "Runtime": "python3.9",
               "FunctionName": "centrica-dev-catfactsPython",
-              "MemorySize": 256,
+              "MemorySize": 128,
               "Timeout": 29,
               "Architectures": [
                 "x86_64"
@@ -214,12 +214,12 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/centrica/dev/1659003276272-2022-07-28T10:14:36.272Z/centrica.zip"
+                "S3Key": "serverless/centrica/dev/1659004266888-2022-07-28T10:31:06.888Z/centrica.zip"
               },
               "Handler": "catfactnode.getItemDetails",
               "Runtime": "nodejs14.x",
               "FunctionName": "centrica-dev-catfactsNode",
-              "MemorySize": 256,
+              "MemorySize": 128,
               "Timeout": 29,
               "Architectures": [
                 "x86_64"
@@ -507,7 +507,7 @@
               "CatfactsNodeLambdaPermissionApiGateway"
             ]
           },
-          "ApiGatewayDeployment1659003274613": {
+          "ApiGatewayDeployment1659004265499": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -728,7 +728,7 @@
       "catfactsPython": {
         "handler": "catfacts.handler",
         "runtime": "python3.9",
-        "memorySize": 256,
+        "memorySize": 128,
         "events": [
           {
             "http": {
@@ -756,14 +756,14 @@
         ],
         "name": "centrica-dev-catfactsPython",
         "package": {},
-        "memory": 256,
+        "memory": 128,
         "timeout": 29,
         "vpc": {}
       },
       "catfactsNode": {
         "handler": "catfactnode.getItemDetails",
         "runtime": "nodejs14.x",
-        "memorySize": 256,
+        "memorySize": 128,
         "events": [
           {
             "http": {
@@ -791,7 +791,7 @@
         ],
         "name": "centrica-dev-catfactsNode",
         "package": {},
-        "memory": 256,
+        "memory": 128,
         "timeout": 29,
         "vpc": {}
       }
@@ -812,10 +812,11 @@
         "patterns": [
           "!node_modules/**",
           "!.npmignore",
-          "!package-lock.json"
+          "!package-lock.json",
+          "!Cenrica Test.postman_collection.json"
         ],
-        "artifact": "F:\\interview\\.serverless\\centrica.zip",
-        "artifactDirectoryName": "serverless/centrica/dev/1659003276272-2022-07-28T10:14:36.272Z"
+        "artifact": "F:\\interview\\centrica\\.serverless\\centrica.zip",
+        "artifactDirectoryName": "serverless/centrica/dev/1659004266888-2022-07-28T10:31:06.888Z"
       },
       "functions": {
         "$ref": "$[\"service\"][\"functions\"]"
@@ -823,10 +824,10 @@
     },
     "layers": {},
     "isDashboardMonitoringPreconfigured": false,
-    "artifact": "F:\\interview\\.serverless\\centrica.zip"
+    "artifact": "F:\\interview\\centrica\\.serverless\\centrica.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/centrica/dev/1659003276272-2022-07-28T10:14:36.272Z",
+    "artifactDirectoryName": "serverless/centrica/dev/1659004266888-2022-07-28T10:31:06.888Z",
     "artifact": "centrica.zip"
   }
 }
