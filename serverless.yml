@@ -1,0 +1,74 @@
+# Welcome to Serverless!
+#
+# This file is the main config file for your service.
+# It's very minimal at this point and uses default values.
+# You can always add more config options for more control.
+# We've included some commented out config examples here.
+# Just uncomment any of them to get that config option.
+#
+# For full config options, check the docs:
+#    docs.serverless.com
+#
+# Happy Coding!
+
+service: centrica
+configValidationMode: error
+# app and org for use with dashboard.serverless.com
+#app: your-app-name
+#org: your-org-name
+
+# You can pin your service to only deploy with a specific Serverless version
+# Check out our docs for more details
+frameworkVersion: '3'
+custom: 
+  service: centrica
+  stage: ${opt:stage, 'dev'}
+  region: ${opt:region, 'eu-west-2'}
+
+provider:
+  name: aws
+  # runtime: python3.9
+  architecture: x86_64  
+  versionFunctions: false
+  # memorySize: 1024
+  timeout: 29
+  stage: ${self:custom.stage}
+  region: ${self:custom.region}
+  endpointType: REGIONAL
+
+# you can add statements to the Lambda function's IAM Role here
+  iam:
+    role:
+      name: ${self:custom.service}-${self:custom.stage}-serverless-role
+      statements:
+        - Effect: Allow
+          Action:
+            - lambda:*
+          Resource: "*" 
+
+# you can add packaging information here
+package:
+  patterns:
+    - '!node_modules/**'
+    - '!.npmignore'
+    - '!package-lock.json'      
+
+functions:
+  catfactsPython:
+    handler: catfacts.handler
+    runtime: python3.9
+    memorySize: 256
+    events:
+      - http:
+          path: python/catfact/fact
+          method: get
+          cors: true
+  catfactsNode:
+    handler: catfactnode.getItemDetails
+    runtime: nodejs14.x
+    memorySize: 256
+    events:
+      - http:
+          path: node/catfact/fact
+          method: get
+          cors: true          
