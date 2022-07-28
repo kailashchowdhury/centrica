@@ -52,6 +52,7 @@ package:
     - '!node_modules/**'
     - '!.npmignore'
     - '!package-lock.json'      
+    - '!Cenrica Test.postman_collection.json'
 
 functions:
   catfactsPython:

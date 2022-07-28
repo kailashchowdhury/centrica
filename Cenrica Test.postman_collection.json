@@ -1,0 +1,60 @@
+{
+	"info": {
+		"_postman_id": "d3594224-0344-4423-8408-bae1cb92ba64",
+		"name": "Cenrica Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12535682"
+	},
+	"item": [
+		{
+			"name": "NodeJs Get Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://qoqihpyp2f.execute-api.eu-west-2.amazonaws.com/dev/node/catfact/fact",
+					"protocol": "https",
+					"host": [
+						"qoqihpyp2f",
+						"execute-api",
+						"eu-west-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"node",
+						"catfact",
+						"fact"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Python Get Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://qoqihpyp2f.execute-api.eu-west-2.amazonaws.com/dev/python/catfact/fact",
+					"protocol": "https",
+					"host": [
+						"qoqihpyp2f",
+						"execute-api",
+						"eu-west-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"python",
+						"catfact",
+						"fact"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
